@@ -20,9 +20,5 @@ export default function Home() {
   }, [dispatch]);
 
   useEffect(() => {}, []);
-  return (
-    <div>
-      <h1>Counter: {user.name}</h1>
-    </div>
-  );
+  return <h1 className="text-xl font-medium underline">Hello world!</h1>;
 }
