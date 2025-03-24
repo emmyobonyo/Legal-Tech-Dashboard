@@ -4,4 +4,10 @@ export interface UserState {
   email: string;
   role: string;
   billableHours: number;
+  password: string;
+}
+
+interface Credentials {
+  email: string;
+  password: string;
 }
