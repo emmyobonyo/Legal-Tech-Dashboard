@@ -1,3 +1,5 @@
+// eslint-disable @typescript-eslint/no-unused-vars
+
 import { useState } from "react";
 import mockUsers from "../lib/apis/data/mockUsers";
 import { Credentials } from "../types/user";
@@ -10,8 +12,13 @@ function LoginForm() {
     email: "",
     password: "",
   });
+  const [validateCredentials, setValidateCredentials] =
+    useState<boolean>(false);
+
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.user);
+
+  console.log(user);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -33,12 +40,13 @@ function LoginForm() {
       foundUser.loggedIn = true;
       dispatch(setUser(foundUser));
     } else {
-      console.log("User not found");
+      setValidateCredentials(true);
+      console.log("Your credentials are false");
     }
   };
+
   return (
     <section className="bg-gray-50">
-      <p>{user.loggedIn.toString()}</p>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a
           href="#"
@@ -92,11 +100,15 @@ function LoginForm() {
               >
                 Sign in
               </div>
+              {validateCredentials && (
+                <p className="text-red-500 font-bold">
+                  Invalid credentials. Please try again
+                </p>
+              )}
             </form>
           </div>
         </div>
       </div>
-      {/* That user does not exist in the database */}
     </section>
   );
 }

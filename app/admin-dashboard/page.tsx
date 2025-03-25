@@ -1,7 +1,20 @@
-import React from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+
+"use client";
+
+import Cases from "../components/Cases";
+import { useSelector } from "react-redux";
+import { RootState } from "../store/store";
 
 function page() {
-  return <div>This is a very cool page</div>;
+  const data = useSelector((state: RootState) => state.data);
+
+  const renderComponent = () => {
+    if (data.value === "cases") {
+      return <Cases />;
+    }
+  };
+  return <div className="w-8/10">{renderComponent()}</div>;
 }
 
 export default page;
