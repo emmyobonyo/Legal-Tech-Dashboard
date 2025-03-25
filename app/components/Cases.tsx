@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { fetchMockCases } from "../lib/apis/hooks/requests";
-import { Case } from "../types/case";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../store/store";
 import { fetchCases } from "../store/reducers/casesSlice";
@@ -12,8 +10,6 @@ function Cases() {
   const { cases, loading, error } = useSelector(
     (state: RootState) => state.cases
   );
-
-  console.log(cases);
 
   const dispatch = useDispatch<AppDispatch>();
 

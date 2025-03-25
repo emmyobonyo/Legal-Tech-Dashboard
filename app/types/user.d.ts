@@ -4,7 +4,7 @@ export interface UserState {
   email: string;
   role: string;
   billableHours: number;
-  loggedIn: false;
+  loggedIn: boolean;
   profile_picture: string;
   rank: string;
 }

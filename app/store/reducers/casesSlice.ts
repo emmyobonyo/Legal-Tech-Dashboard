@@ -18,17 +18,14 @@ export const fetchCases = createAsyncThunk<
   Case[],
   void,
   { rejectValue: string }
->(
-  "cases/fetchCases", // Action type
-  async (_, { rejectWithValue }) => {
-    try {
-      const response = await fetchMockCases();
-      return response; // Return the expected Case[] type here
-    } catch (error) {
-      return rejectWithValue("Failed to fetch cases");
-    }
+>("cases/fetchCases", async (_, { rejectWithValue }) => {
+  try {
+    const response = await fetchMockCases();
+    return response;
+  } catch (error) {
+    return rejectWithValue("Failed to fetch cases");
   }
-);
+});
 
 const casesSlice = createSlice({
   name: "cases",
