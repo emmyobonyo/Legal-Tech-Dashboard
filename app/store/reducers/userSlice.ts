@@ -8,19 +8,23 @@ const initialState: UserState = {
   role: "",
   billableHours: 0,
   loggedIn: false,
+  profile_picture: "",
+  rank: "",
 };
 
 export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setUser: (state, actionm) => {
-      state.id = actionm.payload.id;
-      state.name = actionm.payload.name;
-      state.email = actionm.payload.email;
-      state.role = actionm.payload.role;
-      state.billableHours = actionm.payload.billableHours;
-      state.loggedIn = actionm.payload.loggedIn;
+    setUser: (state, action) => {
+      state.id = action.payload.id;
+      state.name = action.payload.name;
+      state.email = action.payload.email;
+      state.role = action.payload.role;
+      state.billableHours = action.payload.billableHours;
+      state.loggedIn = action.payload.loggedIn;
+      state.profile_picture = action.payload.profile_picture;
+      state.rank = action.payload.rank;
     },
   },
 });

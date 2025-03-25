@@ -5,6 +5,8 @@ export interface UserState {
   role: string;
   billableHours: number;
   loggedIn: false;
+  profile_picture: string;
+  rank: string;
 }
 
 interface Credentials {

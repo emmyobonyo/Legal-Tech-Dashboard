@@ -8,6 +8,8 @@ const users = [
     role: "Admin",
     billableHours: 34,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/1.png",
+    rank: "Administration",
   },
   {
     id: 2,
@@ -18,6 +20,8 @@ const users = [
     role: "Standard",
     billableHours: 24,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/2.png",
+    rank: "Partner",
   },
   {
     id: 3,
@@ -28,6 +32,8 @@ const users = [
     role: "Standard",
     billableHours: 20,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/3.png",
+    rank: "Senior Attorney",
   },
   {
     id: 4,
@@ -38,6 +44,8 @@ const users = [
     role: "Standard",
     billableHours: 30,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/4.png",
+    rank: "Junior Attorney",
   },
   {
     id: 5,
@@ -48,6 +56,8 @@ const users = [
     role: "Standard",
     billableHours: 25,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/5.png",
+    rank: "Partner",
   },
   {
     id: 6,
@@ -58,6 +68,8 @@ const users = [
     role: "Standard",
     billableHours: 20,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/6.png",
+    rank: "Intern",
   },
   {
     id: 7,
@@ -68,6 +80,8 @@ const users = [
     role: "Standard",
     billableHours: 22,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/7.png",
+    rank: "Senior Attorney",
   },
   {
     id: 8,
@@ -78,6 +92,8 @@ const users = [
     role: "Standard",
     billableHours: 23,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/8.png",
+    rank: "Junior Attorney",
   },
   {
     id: 9,
@@ -88,6 +104,8 @@ const users = [
     role: "Standard",
     billableHours: 26,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/9.png",
+    rank: "Senior Attorney",
   },
   {
     id: 10,
@@ -98,6 +116,8 @@ const users = [
     role: "Standard",
     billableHours: 28,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/10.png",
+    rank: "Junior Attorney",
   },
   {
     id: 11,
@@ -108,6 +128,8 @@ const users = [
     role: "Standard",
     billableHours: 27,
     loggedIn: false,
+    profile_picture: "https://fedskillstest.ct.digital/11.png",
+    rank: "Partner",
   },
 ];
 
