@@ -12,7 +12,7 @@ function UserCards({
   rank: string;
 }) {
   return (
-    <li className="py-3 sm:py-4">
+    <li className="py-3 sm:py-4 cursor-pointer">
       <div className="flex items-center">
         <div className="shrink-0">
           <img
