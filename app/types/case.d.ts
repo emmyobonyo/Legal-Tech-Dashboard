@@ -3,7 +3,7 @@ export interface Case {
   title: string;
   description: string;
   status: string;
-  assignedattorneyId: number;
+  assignedAttorneyId: number;
   createdAt: string;
   updatedAt: string;
 }

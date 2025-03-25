@@ -1,20 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchMockCases } from "../lib/apis/hooks/requests";
 import { Case } from "../types/case";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState, AppDispatch } from "../store/store";
+import { fetchCases } from "../store/reducers/casesSlice";
+import CaseCard from "./CaseCard";
 
 function Cases() {
-  const [cases, setCases] = useState<Case[]>([]);
+  const { cases, loading, error } = useSelector(
+    (state: RootState) => state.cases
+  );
 
-  const fetchCases = async () => {
-    const response = await fetchCases();
-    console.log(response);
-  };
+  const dispatch = useDispatch<AppDispatch>();
 
-  fetchCases();
+  useEffect(() => {
+    dispatch(fetchCases());
+  }, [dispatch]);
 
-  return <div>Cases</div>;
+  const firstTenCases = cases
+    .slice(0, 10)
+    .map((caseItem) => (
+      <CaseCard
+        key={caseItem.caseId}
+        title={caseItem.title}
+        description={caseItem.description}
+        status={caseItem.status}
+        caseId={caseItem.caseId}
+      />
+    ));
+
+  if (loading) return <p>Fetching Cases ...</p>;
+  if (error) return <p>Failed to Fetch Cases</p>;
+  return <p>{firstTenCases}</p>;
 }
 
 export default Cases;

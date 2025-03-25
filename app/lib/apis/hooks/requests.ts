@@ -1,5 +1,6 @@
 import users from "../data/mockUsers";
 import cases from "../data/mockCases";
+import { Case } from "@/app/types/case";
 
 export const fetchMockUsers = async () => {
   return new Promise((resolve) => {
@@ -17,7 +18,7 @@ export const fetchMockUser = async (id: number) => {
   });
 };
 
-export const fetchMockCases = async () => {
+export const fetchMockCases = async (): Promise<Case[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(cases);
