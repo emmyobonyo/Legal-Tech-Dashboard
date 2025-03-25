@@ -7,6 +7,7 @@ export default [
     password: "adminpassword",
     role: "Admin",
     billableHours: 34,
+    loggedIn: false,
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 24,
+    loggedIn: false,
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 20,
+    loggedIn: false,
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 30,
+    loggedIn: false,
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 25,
+    loggedIn: false,
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 20,
+    loggedIn: false,
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 22,
+    loggedIn: false,
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 23,
+    loggedIn: false,
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 26,
+    loggedIn: false,
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 28,
+    loggedIn: false,
   },
   {
     id: 11,
@@ -97,5 +107,6 @@ export default [
     password: "standardpassword",
     role: "Standard",
     billableHours: 27,
+    loggedIn: false,
   },
 ];

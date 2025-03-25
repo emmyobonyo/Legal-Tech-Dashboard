@@ -1,12 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import mockUsers from "../lib/apis/data/mockUsers";
-import { Credentials, UserState } from "../types/user";
+import { Credentials } from "../types/user";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from "../store/reducers/userSlice";
+import { RootState } from "../store/store";
 
 function LoginForm() {
   const [userCredentials, setUserCredentials] = useState<Credentials>({
     email: "",
     password: "",
   });
+  const dispatch = useDispatch();
+  const user = useSelector((state: RootState) => state.user);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -19,19 +24,21 @@ function LoginForm() {
 
   const checkForUser = () => {
     const foundUser = mockUsers.find(
-      (user: UserState) =>
+      (user) =>
         user.email === userCredentials.email &&
         user.password === userCredentials.password
     );
 
     if (foundUser) {
-      console.log("User Found");
+      foundUser.loggedIn = true;
+      dispatch(setUser(foundUser));
     } else {
       console.log("User not found");
     }
   };
   return (
     <section className="bg-gray-50">
+      <p>{user.loggedIn.toString()}</p>
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <a
           href="#"

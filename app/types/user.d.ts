@@ -4,7 +4,7 @@ export interface UserState {
   email: string;
   role: string;
   billableHours: number;
-  password: string;
+  loggedIn: false;
 }
 
 interface Credentials {
