@@ -33,7 +33,7 @@ function Cases() {
 
   if (loading) return <p>Fetching Cases ...</p>;
   if (error) return <p>Failed to Fetch Cases</p>;
-  return <p>{firstTenCases}</p>;
+  return <div className="flex flex-wrap">{firstTenCases}</div>;
 }
 
 export default Cases;

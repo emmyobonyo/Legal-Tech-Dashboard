@@ -1,5 +1,5 @@
 const sideNavigationLinks = {
-  Admin: ["Users", "Cases", "Reports"],
+  Admin: ["Cases", "Users", "Reports"],
   Standard: ["Cases"],
 };
 
