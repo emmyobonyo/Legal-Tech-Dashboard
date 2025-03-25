@@ -21,6 +21,7 @@ function Reports() {
     .slice(0, 10)
     .map((report) => (
       <ReportsCard
+        key={report.reportId}
         reportName={report.reportName}
         format={report.format}
         updatedAt={report.updatedAt}

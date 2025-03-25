@@ -1,3 +1,5 @@
+// eslint-disable @typescript-eslint/no-unused-vars
+
 import { useState } from "react";
 import mockUsers from "../lib/apis/data/mockUsers";
 import { Credentials } from "../types/user";
@@ -15,6 +17,8 @@ function LoginForm() {
 
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.user);
+
+  console.log(user);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;

@@ -1,4 +1,6 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+/* eslint-disable @typescript-eslint/no-unused-expressions */
+
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchMockReports } from "@/app/lib/apis/hooks/requests";
 import { ReportType } from "@/app/types/report";
 
@@ -23,6 +25,7 @@ export const fetchReports = createAsyncThunk<
     const response = await fetchMockReports();
     return response;
   } catch (error) {
+    console.log(error);
     return rejectWithValue("Failed To Reach Users");
   }
 });

@@ -1,5 +1,3 @@
-import React from "react";
-
 function UserCards({
   profile_picture,
   name,

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { AttorneyInformation } from "./AttorneyInformation";
 
 export function Navigation() {

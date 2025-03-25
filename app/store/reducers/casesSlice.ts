@@ -23,6 +23,7 @@ export const fetchCases = createAsyncThunk<
     const response = await fetchMockCases();
     return response;
   } catch (error) {
+    console.log(error);
     return rejectWithValue("Failed to fetch cases");
   }
 });

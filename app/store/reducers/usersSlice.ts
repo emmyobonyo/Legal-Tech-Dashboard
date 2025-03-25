@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { UserState } from "@/app/types/user";
 import { fetchMockUsers } from "@/app/lib/apis/hooks/requests";
 
@@ -23,6 +23,7 @@ export const fetchUsers = createAsyncThunk<
     const response = await fetchMockUsers();
     return response;
   } catch (error) {
+    console.log(error);
     return rejectWithValue("Failed to fecth Users");
   }
 });
