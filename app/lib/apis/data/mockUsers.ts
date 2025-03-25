@@ -1,4 +1,4 @@
-export default [
+const users = [
   {
     id: 1,
     name: "Emmanuel Obonyo",
@@ -110,3 +110,5 @@ export default [
     loggedIn: false,
   },
 ];
+
+export default users;

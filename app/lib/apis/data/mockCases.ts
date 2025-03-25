@@ -1,4 +1,4 @@
-export default [
+const cases = [
   {
     caseId: 1,
     title: "Company A vs Company B",
@@ -270,3 +270,5 @@ export default [
     updatedAt: "2023-08-20",
   },
 ];
+
+export default cases;

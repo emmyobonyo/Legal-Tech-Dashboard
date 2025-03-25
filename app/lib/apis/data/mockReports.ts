@@ -1,4 +1,4 @@
-export default [
+const reports = [
   {
     reportId: 1,
     reportName: "Monthly Billing Report",
@@ -300,3 +300,5 @@ export default [
     assignedAttorneyId: 8,
   },
 ];
+
+export default reports;
