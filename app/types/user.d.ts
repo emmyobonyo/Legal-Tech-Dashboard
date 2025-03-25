@@ -9,7 +9,7 @@ export interface UserState {
   rank: string;
 }
 
-interface Credentials {
+export interface Credentials {
   email: string;
   password: string;
 }

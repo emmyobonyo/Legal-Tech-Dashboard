@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import mockUsers from "../lib/apis/data/mockUsers";
 import { Credentials } from "../types/user";
 import { useDispatch, useSelector } from "react-redux";
@@ -41,9 +41,6 @@ function LoginForm() {
     }
   };
 
-  useEffect(() => {
-    console.log(validateCredentials);
-  }, [validateCredentials]);
   return (
     <section className="bg-gray-50">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">

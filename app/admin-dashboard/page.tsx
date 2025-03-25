@@ -1,7 +1,11 @@
-import React from "react";
+import Cases from "../components/Cases";
 
 function page() {
-  return <div>This is a very cool page</div>;
+  return (
+    <div>
+      <Cases />
+    </div>
+  );
 }
 
 export default page;
