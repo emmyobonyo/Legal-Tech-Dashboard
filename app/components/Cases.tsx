@@ -13,6 +13,8 @@ function Cases() {
     (state: RootState) => state.cases
   );
 
+  console.log(cases);
+
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
