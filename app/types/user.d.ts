@@ -1,6 +1,6 @@
 export interface UserState {
   id: number | null;
-  name: string | null;
+  name: string;
   email: string;
   role: string;
   billableHours: number;
