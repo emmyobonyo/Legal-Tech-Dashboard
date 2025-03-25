@@ -7,6 +7,7 @@ const initialState: UserState = {
   email: "",
   role: "",
   billableHours: 0,
+  loggedIn: false,
 };
 
 export const userSlice = createSlice({
@@ -19,6 +20,7 @@ export const userSlice = createSlice({
       state.email = actionm.payload.email;
       state.role = actionm.payload.role;
       state.billableHours = actionm.payload.billableHours;
+      state.loggedIn = actionm.payload.loggedIn;
     },
   },
 });
