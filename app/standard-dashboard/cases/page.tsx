@@ -1,5 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-diable react-hooks/exhaustive-deps */
+
+/* eslint-disable react-hooks/exhaustive-deps */
+
 "use client";
 
 import cases from "@/app/lib/apis/data/mockCases";

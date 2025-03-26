@@ -1,4 +1,4 @@
-/* eslint-disbale  react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/exhaustive-deps */
 
 "use client";
 
