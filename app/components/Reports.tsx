@@ -28,8 +28,8 @@ function Reports() {
       />
     ));
 
-  if (loading) return <p>Fetching Users ...</p>;
-  if (error) return <p>Failed to Fetch Users</p>;
+  if (loading) return <p>Fetching Reports ...</p>;
+  if (error) return <p>Failed to Fetch Reports</p>;
   return <div>{firstTenReports}</div>;
 }
 
