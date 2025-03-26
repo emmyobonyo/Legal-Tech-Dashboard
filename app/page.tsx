@@ -13,7 +13,11 @@ export default function Home() {
 
   useEffect(() => {
     if (user.id !== null) {
-      router.push("/admin-dashboard");
+      if (user.role === "Admin") {
+        router.push("/admin-dashboard");
+      } else {
+        router.push("/standard-dashboard");
+      }
     }
   }, [user.id, router]);
 

@@ -4,20 +4,25 @@ import sideNavigationLinks from "../lib/apis/data/sideBarLinks";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store/store";
 import { setData } from "../store/reducers/dataSlice";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 function SideNavigation() {
   const user = useSelector((state: RootState) => state.user);
   const data = useSelector((state: RootState) => state.data);
   const dispatch = useDispatch();
   const router = useRouter();
+  const pathname = usePathname();
 
   const updateFetchedData = (newState: string) => {
     dispatch(setData(newState));
   };
 
   useEffect(() => {
-    router.push(`/admin-dashboard/${data.value.toLowerCase()}`);
+    router.push(
+      `/${
+        user.role === "Admin" ? "admin-dashboard" : "standard-dashboard"
+      }/${data.value.toLowerCase()}`
+    );
   }, [data.value, router]);
 
   const role = user.role as keyof typeof sideNavigationLinks;
