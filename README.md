@@ -30,7 +30,7 @@ https://www.loom.com/share/6bd548e1277749ae950380b0de2f5594?sid=00253771-4981-47
 ## Clone This Repository
 
 ```
-$ git clone https://github.com/emmyobonyo/Frontend-Assignment.git
+$ git clone https://github.com/emmyobonyo/Legal-Tech-Dashboard.git
 $ cd Legal-Tech-Dashboard
 ```
 
