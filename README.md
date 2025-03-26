@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Live Demo
 
-## Getting Started
+https://legal-tech-dashboard.vercel.app/
 
-First, run the development server:
+## Short Video Walk Through
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+https://www.loom.com/share/6bd548e1277749ae950380b0de2f5594?sid=00253771-4981-4729-a50f-cf5dd611f7a5
+
+## App Screen Shots
+
+- Login Screen
+
+  ![Login Screen](./public/Login-Screen.PNG)
+
+- Admin Dashboard
+
+  ![Admin Dashboard](./public/Admin-Dashboard.png)
+
+- Standard Dashboard
+
+  ![Standard Dashboard](./public/Standard-Dashboard.png)
+
+## Built With
+
+- NextJS, Redux, TailwindCSS, MaterialUI Icons.
+- Jest (Testing)
+
+# Set Up
+
+## Clone This Repository
+
+```
+$ git clone https://github.com/emmyobonyo/Frontend-Assignment.git
+$ cd Legal-Tech-Dashboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+$ npm install
+$ npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## User Credentials
 
-## Learn More
+```
+Admin:
+- email: emmanuelobonyo@legaltech.com
+- password: adminpassword
 
-To learn more about Next.js, take a look at the following resources:
+Standard:
+- email: joshuaomara@legaltech.com
+- password: standardpassword
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+More standard users om `app/lib/apis/data/mockUsers.ts`
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Branches
 
-## Deploy on Vercel
+- **main**: Final working code (default branch)
+- **login-form**: Authentication functionality
+- **admin-dashboard**: Admin dashboard features
+- **standard-dashboard**: Standard user dashboard features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Techincal Decisions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Displaying Information using State**: When an Admin redirects to another page, global state is changes, and the component that is displayed is dependent on that state.
+- **Conditinally rendering the dashboard**: The Dashboard that is rendered is rependent on `User role`. Admin Users (emmanuelobonyo@legaltech.com) will see the Admin Dashboard and Standard Users will see the standard Dashboard.
+- **API state managed by Redux**: `Pending`, `Fullfilled` and `Rejected` States are managed in Redux
+
+## 🤝 Contributing
+
+Feedback, contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/emmyobonyo/Legal-Tech-Dashboard/issues).
