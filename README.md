@@ -14,11 +14,11 @@ https://www.loom.com/share/6bd548e1277749ae950380b0de2f5594?sid=00253771-4981-47
 
 - Admin Dashboard
 
-  ![Admin Dashboard](./public/Admin-Dashboard.png)
+  ![Admin Dashboard](./public/Admin-Dashboard.PNG)
 
 - Standard Dashboard
 
-  ![Standard Dashboard](./public/Standard-Dashboard.png)
+  ![Standard Dashboard](./public/Standard-Dashboard.PNG)
 
 ## Built With
 
