@@ -39,6 +39,7 @@ $ cd Legal-Tech-Dashboard
 ```
 $ npm install
 $ npm run dev
+$ npm test (testing)
 ```
 
 ## User Credentials
