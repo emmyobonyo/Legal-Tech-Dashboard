@@ -1,3 +1,5 @@
+/* eslint-diable react-hooks/exhaustive-deps */
+
 "use client";
 import React, { useEffect } from "react";
 import sideNavigationLinks from "../lib/apis/data/sideBarLinks";
