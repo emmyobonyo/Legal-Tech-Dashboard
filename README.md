@@ -65,8 +65,8 @@ More standard users om `app/lib/apis/data/mockUsers.ts`
 
 ## Techincal Decisions
 
-- **Displaying Information using State**: When an Admin redirects to another page, global state is changes, and the component that is displayed is dependent on that state.
-- **Conditinally rendering the dashboard**: The Dashboard that is rendered is rependent on `User role`. Admin Users (emmanuelobonyo@legaltech.com) will see the Admin Dashboard and Standard Users will see the standard Dashboard.
+- **Displaying Information using State**: When an Admin redirects to another page, global state is changed, and the component that is displayed is dependent on that state.
+- **Conditinally rendering the dashboard**: The Dashboard that is rendered is dependent on `User role`. Admin Users (emmanuelobonyo@legaltech.com) will see the Admin Dashboard and Standard Users will see the standard Dashboard.
 - **API state managed by Redux**: `Pending`, `Fullfilled` and `Rejected` States are managed in Redux
 
 ## 🤝 Contributing
